@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyberfortress Labs</title>
+    <meta name="description" content="Research and Implementation of a Centralized Management and Processing System for Cyber Attack Events using Elastic Stack">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/grid.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="favicon_io/image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="favicon_io/image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">        <div class="nav-container">            <div class="nav-brand">
+                <i class="fas fa-shield-alt"></i>
+                <span>Cyberfortress Labs</span>
+            </div><ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#technologies" class="nav-link">Technologies</a></li>
+                <li><a href="#architecture" class="nav-link">Architecture</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+            </ul>
+            <div class="nav-toggle" id="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">Intelligent SOC Ecosystem</span>
+                </h1>
+                <p class="hero-subtitle">
+                    An Intelligent SOC Ecosystem for Monitoring, Detection, and Response to Cyber Attacks
+                </p>                <div class="hero-buttons">
+                    <a class="btn btn-primary" href="https://github.com/Cyberfortress-Labs">
+                        <i class="fas fa-rocket"></i>
+                        Explore Project
+                    </a>
+                    <button class="btn btn-secondary" onclick="scrollToSection('architecture')">
+                        <i class="fas fa-sitemap"></i>
+                        View Architecture
+                    </button>
+
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-card card-1">
+                    <i class="fas fa-search"></i>
+                    <span>Real-time Detection</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Analytics</span>
+                </div>
+                <div class="floating-card card-3">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Security</span>
+                </div>
+                <div class="floating-card card-4">
+                    <i class="fas fa-brain"></i>
+                    <span>AI/ML Engine</span>
+                </div>
+                <div class="floating-card card-5">
+                    <i class="fas fa-robot"></i>
+                    <span>SOAR Automation</span>
+                </div>
+                <div class="floating-card card-6">
+                    <i class="fas fa-crosshairs"></i>
+                    <span>Threat Intel</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Project Overview</h2>
+                <p class="section-subtitle">An Intelligent SOC Ecosystem for Monitoring, Detection, and Response to Cyber Attacks</p>
+            </div>
+            
+            <div class="bento-grid">
+                <!-- Main Description Card -->
+                <div class="bento-card bento-large">
+                    <div class="card-header">
+                        <i class="fas fa-info-circle"></i>
+                        <h3>Project Description</h3>
+                    </div>
+                    <p>
+                        A unified intelligent SOC ecosystem where SIEM, SOAR, OpenXDR, Threat Intelligence, and AI/ML/LLM platforms 
+                        are integrated into a cohesive operational pipeline. The system enables end-to-end security event processing: 
+                        from log collection and normalization to analysis and automated incident response. SmartXDR serves as the 
+                        intelligent fusion layer, providing semantic analysis, event enrichment, and risk-based triage prioritization.
+                    </p>
+                    <!-- 
+                    <div class="status-badge status-complete">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Completed</span>
+                    </div>
+                    Status Badge -->
+                    <div class="project-tags">
+                        <span class="project-tag">SIEM</span>
+                        <span class="project-tag">SOAR</span>
+                        <span class="project-tag">OpenXDR</span>
+                        <span class="project-tag">AI/ML</span>
+                        <span class="project-tag">RAG</span>
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Elasticsearch</span>
+                        <span class="project-tag">Wazuh</span>
+                        <span class="project-tag">MISP</span>
+                        <span class="project-tag">IntelOwl</span>
+                        <span class="project-tag">n8n</span>
+                        <span class="project-tag">SmartXDR</span>
+                        <span class="project-tag">DFIR-IRIS</span>
+                        <span class="project-tag">CTI</span>
+                        <span class="project-tag">Open Source</span>
+                    </div>
+                </div>
+
+                <!-- Key Features -->
+                <div class="bento-card bento-medium">
+                    <div class="card-header">
+                        <i class="fas fa-star"></i>
+                        <h3>Key Features</h3>
+                    </div>
+                    <ul class="feature-list">
+                        <li><i class="fas fa-check"></i> Real-time log monitoring & alerting</li>
+                        <li><i class="fas fa-check"></i> AI/ML-based log classification</li>
+                        <li><i class="fas fa-check"></i> CTI enrichment (MISP, IntelOwl)</li>
+                        <li><i class="fas fa-check"></i> Automated incident response (SOAR)</li>
+                        <li><i class="fas fa-check"></i> MITRE ATT&CK mapping</li>
+                        <li><i class="fas fa-check"></i> Human-in-the-loop AI support</li>
+                        <li><i class="fas fa-check"></i> Customizable dashboards</li>
+                        <li><i class="fas fa-check"></i> Integration with SIEM</li>
+                        <li><i class="fas fa-check"></i> Open Source Project</li>
+
+                    </ul>
+                </div>
+
+                <!-- Statistics -->
+                <div class="bento-card bento-small stat-card">
+                    <div class="stat-number gradient-text">24/7</div>
+                    <div class="stat-label">Monitoring</div>
+                </div>
+
+                <div class="bento-card bento-small stat-card">
+                    <div class="stat-number gradient-text">10+</div>
+                    <div class="stat-label">Platforms</div>
+                </div>
+
+                <div class="bento-card bento-small stat-card">
+                    <div class="stat-number gradient-text">4</div>
+                    <div class="stat-label">Attack Scenarios</div>
+                </div>
+
+                <div class="bento-card bento-small stat-card">
+                    <div class="stat-number gradient-text">6</div>
+                    <div class="stat-label">Processing Phases</div>
+                </div>
+
+                <!-- Security Framework -->
+                <div class="bento-card bento-medium framework-card">
+                    <div class="card-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Security Framework</h3>
+                    </div>
+                    <div class="framework-content">
+                        <div class="framework-item">
+                            <img src="img/logos/mitre-attack-logo.png" alt="MITRE ATT&CK" class="framework-logo">
+                            <span>MITRE ATT&CK</span>
+                        </div>
+                        <div class="framework-item">
+                            <i class="fas fa-database"></i>
+                            <span>Elastic Common Schema</span>
+                        </div>
+                        <div class="framework-item">
+                            <i class="fas fa-lock"></i>
+                            <span>SSL/TLS Encryption</span>
+                        </div>
+                        <div class="framework-item">
+                            <i class="fas fa-crosshairs"></i>
+                            <span>CTI Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technologies Section -->
+    <section id="technologies" class="technologies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Technologies & Tools</h2>
+                <p class="section-subtitle">Cutting-edge technologies powering our SIEM solution</p>
+            </div>
+
+            <div class="tech-grid">
+                <!-- Elastic Stack -->                <div class="tech-card main-tech">
+                    <div class="tech-icon">
+                        <img src="img/logos/elastic-stack-logo.png" alt="Elastic Stack Logo" class="tech-logo">
+                    </div>
+                    <h3>Elastic Stack (ELK)</h3>
+                    <p>Complete search and analytics platform</p>
+                    <div class="tech-items">
+                        <span class="tech-tag">
+                            <img src="img/logos/elasticsearch-logo.png" alt="Elasticsearch" class="tech-tag-icon">
+                            Elasticsearch
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/logos/logstash-logo.png" alt="Logstash" class="tech-tag-icon">
+                            Logstash
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/logos/kibana-logo.png" alt="Kibana" class="tech-tag-icon">
+                            Kibana
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/logos/beats-logo.png" alt="Beats" class="tech-tag-icon">
+                            Beats
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/elastic-agent.png" alt="Elastic Agent" class="tech-tag-icon">
+                            Elastic Agent
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/elastic-fleet.png" alt="Elastic Fleet" class="tech-tag-icon">
+                            Elastic Fleet
+                        </span>
+                    </div>
+                </div>                <!-- Network Security -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <img src="img/logos/suricata-logo.png" alt="Network Security" class="tech-logo">
+                    </div>
+                    <h3>Network Security</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">
+                            <img src="img/logos/pfsense-logo.png" alt="pfSense" class="tech-tag-icon">
+                            pfSense
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/logos/suricata-logo.png" alt="Suricata" class="tech-tag-icon">
+                            Suricata IDS/IPS
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/Zeek.webp" alt="Suricata" class="tech-tag-icon">
+                            Zeek NSM
+                        </span>
+                        <span class="tech-tag">
+                            <img src="img/logos/nginx-icon.svg" alt="Nginx" class="tech-tag-icon">
+                            Nginx
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Log Sources -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Log Sources</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">
+                            <img src="img/windows11.png" alt="Windows Events" class="tech-tag-icon">
+                            Windows Events</span>
+                        <span class="tech-tag">
+                            <img src="img/Canonical-Ubuntu.png" alt="Linux Syslogs" class="tech-tag-icon">
+                            Linux Syslogs</span>
+                        <span class="tech-tag">
+                            <img src="img/dvwa-logo-500x500.png" alt="Web Server Logs" class="tech-tag-icon">
+                            Web Server Logs</span>
+                        <span class="tech-tag">
+                            <img src="img/PfSense_logo.png" alt="Firewall Logs" class="tech-tag-icon">
+                            Firewall Logs</span>
+                        <span class="tech-tag">
+                            <img src="img/logos/suricata-logo.png" alt="IDS/IPS Alerts" class="tech-tag-icon">
+                            IDS/IPS Alerts</span>
+                    </div>
+                </div>
+
+                <!-- SOAR & Automation -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>SOAR & Automation</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">
+                            <img src="img/N8n-logo-new.svg.png" alt="n8n Workflows" class="tech-tag-icon">
+                            n8n Workflows</span>
+                        <span class="tech-tag">
+                            <img src="img/iris_logo_blue.png" alt="DFIR-IRIS" class="tech-tag-icon">
+                            DFIR-IRIS</span>
+                        <span class="tech-tag">
+                            ElastAlert2</span>
+                        <span class="tech-tag">
+                            Playbooks</span>
+                    </div>
+                </div>
+
+                <!-- Threat Intelligence -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-crosshairs"></i>
+                    </div>
+                    <h3>Threat Intelligence</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">
+                            <img src="img/Misp-logo.png" alt="MISP" class="tech-tag-icon">
+                            MISP</span>
+                        <span class="tech-tag">
+                            <img src="img/IntelOwl.png" alt="IntelOwl" class="tech-tag-icon">
+                            IntelOwl</span>
+                        <span class="tech-tag">
+                            IOC Enrichment</span>
+                        <span class="tech-tag">
+                            CTI Feeds</span>
+                    </div>
+                </div>
+
+                <!-- AI/ML Engine -->
+                <div class="tech-card">
+                    <div class="tech-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI/ML Engine</h3>
+                    <div class="tech-items">
+                        <span class="tech-tag">Log Classification</span>
+                        <span class="tech-tag">LLM RAG</span>
+                        <span class="tech-tag">Anomaly Detection</span>
+                        <span class="tech-tag">SmartXDR</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Architecture Section -->
+    <section id="architecture" class="architecture">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">System Architecture</h2>
+                <p class="section-subtitle">Comprehensive deployment architecture</p>
+            </div>
+
+            <div class="architecture-container">
+                <div class="architecture-image">
+                    <img src="img/KLTN_SOC-Ecosystem-LogicFlow.drawio.png" alt="SIEM Deployment Architecture" class="arch-img">
+                    <div class="image-overlay">
+                        <button class="btn btn-primary" onclick="openImageModal()">
+                            <i class="fas fa-expand"></i>
+                            View Full Size
+                        </button>
+                    </div>
+                </div>
+
+                <div class="architecture-details">
+                    <div class="detail-card">
+                        <h3><i class="fas fa-network-wired"></i> Infrastructure & Sensors</h3>
+                        <p>Network Sensors (Suricata IDPS, Zeek NSM), Endpoint Sensors (Wazuh Agents), and Network Infrastructure (pfSense Firewall, Nginx Reverse Proxy, WAF) provide comprehensive visibility.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-database"></i> Central Data</h3>
+                        <p>Logs Management (Logstash, Elastic Agents, Fleet) normalizes data to ECS format. Elasticsearch serves as the centralized Data Lake for fast retrieval and long-term Big Data storage.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-chart-bar"></i> Application & Analytics</h3>
+                        <p>Kibana (SIEM Dashboard), Wazuh Manager (Security Management), Elastic Detection Rules (KQL/EQL), and ElastAlert2 provide real-time analysis and multi-layer alert generation.</p>
+                    </div>
+                    <div class="detail-card">
+                        <h3><i class="fas fa-cogs"></i> Orchestration & Response</h3>
+                        <p>n8n (Integration Hub), DFIR-IRIS (Incident Management), MISP & IntelOwl (CTI Platform), and SmartXDR (AI-powered analysis, automated reporting, human-in-the-loop decision support).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- System Processing Workflow Section -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">System Processing Workflow</h2>
+                <p class="section-subtitle">End-to-end security event processing pipeline</p>
+            </div>
+
+            <div class="architecture-container">
+                <div class="architecture-image">
+                    <img src="img/KLTN_SOC-Ecosystem-Pipeline.drawio.png" alt="SOC Ecosystem Pipeline" class="arch-img">
+                    <div class="image-overlay">
+                        <button class="btn btn-primary" onclick="openPipelineModal()">
+                            <i class="fas fa-expand"></i>
+                            View Full Size
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-phases">
+                <div class="phase-card">
+                    <span class="phase-number">1</span>
+                    <h4>Log Collecting</h4>
+                    <p>Elastic Agent and Fleet collect raw logs from Firewall (pfSense), Linux Router, IDPS (Suricata), NSM (Zeek), WAF (ModSecurity). Logs are parsed, normalized to ECS standard and stored for pipeline processing.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">2</span>
+                    <h4>Log Pre-processing</h4>
+                    <p>SmartXDR Ingest Pipeline filters redundant fields, extracts contextual information, and generates the ml_input field - a structured, condensed log representation serving as input for ML classification.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">3</span>
+                    <h4>Classification and Enrichment</h4>
+                    <p>SmartXDR Classification uses Bylastic (DistilBERT-based model by Byviz Analytics) to analyze ml_input semantically, assign severity labels, and generate prediction_probability scores stored in ml.prediction.* fields.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">4</span>
+                    <h4>Alert Generation and Correlation</h4>
+                    <p>Elastic Detection Rules query ML fields for anomaly detection. ElastAlert2 monitors alerts index and forwards matched alerts with IoCs, timestamps, and Kibana links to DFIR-IRIS for case management.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">5</span>
+                    <h4>Contextual Enrichment and Incident Response</h4>
+                    <p>Analysts review alerts in DFIR-IRIS, convert to Incident Cases. IntelOwl performs IoC pre-analysis via MISP and VirusTotal. SmartXDR Analysis uses RAG for intelligent interpretation and risk assessment.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">6</span>
+                    <h4>Automated Response and Reporting</h4>
+                    <p>n8n workflows orchestrate Wazuh Active Response for endpoint isolation, pfSense/Suricata rule updates for network blocking. SmartXDR Reporting generates DOCX reports, uploads to cloud storage, and sends Telegram notifications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SmartXDR Section -->
+    <section id="smartxdr" class="smartxdr">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">SmartXDR</h2>
+                <p class="section-subtitle">Intelligent SOC Ecosystem Core - The proposed solution designed as the central brain orchestrating the entire SOC operational pipeline</p>
+            </div>
+
+            <div class="smartxdr-architecture">
+                <div class="architecture-container">
+                    <div class="architecture-image">
+                        <img src="img/KLTN_SOC-Ecosystem-SmartXDR.drawio.png" alt="SmartXDR Architecture" class="arch-img">
+                        <div class="image-overlay">
+                            <button class="btn btn-primary" onclick="openSmartXDRModal()">
+                                <i class="fas fa-expand"></i>
+                                View Full Size
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 
+            <div class="smartxdr-intro">
+                <div class="intro-card">
+                    <p>
+                        SmartXDR is designed as the central brain orchestrating the entire end-to-end SOC operational pipeline, 
+                        from data collection and normalization to analysis and automated response. This architecture integrates 
+                        the power of three main technological pillars:
+                    </p>
+                    <ul class="pillar-list">
+                        <li><strong>OpenXDR and SIEM:</strong> Serving as the foundation for centralized log data management and comprehensive infrastructure security monitoring.</li>
+                        <li><strong>AI/ML Engine:</strong> The intelligent processing core, combining Machine Learning models for high-performance real-time log classification with LLM Re-ranking RAG technology for deep incident context analysis and false positive elimination.</li>
+                        <li><strong>SOAR and CTI:</strong> Automating containment response workflows and enriching alert data with trusted threat intelligence sources.</li>
+                    </ul>
+                </div>
+            </div>
+            SmartXDR Introduction -->
+            <div class="smartxdr-grid">
+                <!-- SmartXDR Core -->
+                <div class="smartxdr-card">
+                    <div class="card-header">
+                        <h3>SmartXDR Core</h3>
+                    </div>
+                    <p>
+                        The central Control Plane responsible for orchestrating all modules, routing data, managing background tasks, 
+                        and providing AI/LLM/RAG services. Includes API Gateway (Flask + Gunicorn), Re-ranking RAG with ChromaDB, 
+                        Redis cache, conversation memory, and RBAC authentication with rate-limiting.
+                    </p>
+                </div>
+
+                <!-- SmartXDR Ingest Pipeline -->
+                <div class="smartxdr-card">
+                    <div class="card-header">
+                        <h3>Ingest Pipeline</h3>
+                    </div>
+                    <p>
+                        Handles data enrichment before storage by receiving ECS-compliant logs from Logstash, Elastic Agents and Fleet. 
+                        Custom-designed pipeline filters noise, extracts contextual information, and generates the <code>ml_input</code> field 
+                        as standardized input for SmartXDR ML Classification.
+                    </p>
+                </div>
+
+                <!-- SmartXDR Classification -->
+                <div class="smartxdr-card">
+                    <div class="card-header">
+                        <h3>Classification</h3>
+                    </div>
+                    <p>
+                        Uses Bylastic - a pre-trained DistilBERT model by Byviz Analytics - optimized for Elastic ecosystem. 
+                        Automatically classifies logs into INFO, WARNING, and ERROR severity levels by analyzing <code>ml_input</code> semantics, 
+                        providing <code>prediction_probability</code> scores for confidence assessment.
+                    </p>
+                </div>
+
+                <!-- SmartXDR Analysis -->
+                <div class="smartxdr-card">
+                    <div class="card-header">
+                        <h3>Analysis</h3>
+                    </div>
+                    <p>
+                        Deep analysis layer performing semantic analysis on Logs and IoCs. Features alert aggregation with Risk Score (0-100) 
+                        calculated via multi-factor algorithm (Severity Distribution, Attack Escalation, ML Confidence). 
+                        Integrates LLM+RAG for CTI-style reports and DFIR-IRIS for IoC enrichment via VirusTotal and MISP.
+                    </p>
+                </div>
+
+                <!-- SmartXDR Reporting -->
+                <div class="smartxdr-card">
+                    <div class="card-header">
+                        <h3>Reporting</h3>
+                    </div>
+                    <p>
+                        Extracts and aggregates classified log events to generate administrative reports from Elasticsearch and ML Classification results. 
+                        Supports automated periodic reports and detailed triage reports by log source, distributed via Email/Telegram and Webhook 
+                        with cloud storage upload for auditing compliance.
+                    </p>
+                </div>
+
+                <!-- SmartXDR Assistant -->
+                <div class="smartxdr-card">
+                    <div class="card-header">
+                        <h3>Assistant</h3>
+                    </div>
+                    <p>
+                        AI Security Assistant combining LLM with Advanced RAG using Two-Stage Retrieval: Bi-encoder Semantic Search (ChromaDB) 
+                        for candidate filtering, and Cross-encoder Re-ranking for precision. Features MMR diversity optimization, 
+                        Dynamic Thresholding, Token-aware Windowing, and MITRE ATT&CK mapping via Telegram Bot and API/CLI interfaces.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- Demo Section -->
+    <section id="demo" class="demo" style="background-color: #ffffff; padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">System Demo</h2>
+                <p class="section-subtitle">Watch our SmartXDR system in action</p>
+            </div>
+
+            <div class="architecture-container">
+                <div class="architecture-image" style="background: white; padding: 6rem 2rem; text-align: center;">
+                    <div style="margin-bottom: 2rem;">
+                        <i class="fas fa-play-circle" style="font-size: 5rem; color: #02457A; opacity: 0.9;"></i>
+                    </div>
+                    <h3 style="color: #1a365d; margin-bottom: 1rem; font-size: 1.5rem;">View Full System Demo</h3>
+                    <p style="color: #4a5568; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                        Access our comprehensive video demonstration showcasing the complete SOC pipeline, from log collection to automated response.
+                    </p>
+                    <a href="https://drive.google.com/drive/folders/1TnPI0jEuVOhzjaLv8Pt6tsFN6O2h-dR9?usp=sharing" target="_blank" class="btn btn-primary">
+                        <i class="fab fa-google-drive"></i>
+                        Watch on Drive
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Project Team</h2>
+                <p class="section-subtitle">Meet the developers behind this SIEM solution</p>
+            </div>
+
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-image">
+                        <img src="img/Lai-Quan-Thien.png" alt="Lai Quan Thien">
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="https://github.com/wanthinnn"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/wanthinnn/"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Lai Quan Thien</h3>
+                        <p class="team-role">SOC Analyst</p>
+                        <p class="team-description">
+                            Specialized in SIEM, SOC operations, and advanced threat detection. Skilled in building centralized monitoring systems with ELK, Suricata, and security automation solutions.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="team-card">
+                    <div class="team-image">
+                         <img src="img/Ho-Diep-Huy.png" alt="Ho Diep Huy">
+
+                        <div class="team-overlay">
+                            <div class="team-social">
+                                <a href="https://github.com/hohuyy"><i class="fab fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/ho-diep-huy-361bbb2a2/"><i class="fab fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                                        <div class="team-info">
+                        <h3>Ho Diep Huy</h3>
+                        <p class="team-role">SOC Analyst</p>
+                        <p class="team-description">Experienced in SOC workflows, SIEM systems, and threat detection techniques. 
+                            Proficient in deploying ELK Stack, Suricata IDS/IPS, and creating automated security solutions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Cyberfortress Labs</span>
+                </div>
+                <div class="footer-text">
+                    <p>&copy; 2025 Cyberfortress Labs Project</p>
+                    <p>University of Information Technology</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="img/deployment-architecture.png" alt="SIEM Architecture">
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/modal.js"></script>
+</body>
+</html>
+
+
