@@ -826,7 +826,7 @@ p {
 
 .smartxdr-architecture .architecture-container {
     grid-template-columns: 1fr;
-    max-width: 1000px;
+    max-width: 100%;
     margin: 0 auto;
 }
 
@@ -834,6 +834,7 @@ p {
     background: white;
     padding: var(--spacing-md);
     border: 1px solid var(--border);
+    max-width: 100%;
 }
 
 .workflow-title {
