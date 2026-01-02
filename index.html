@@ -566,26 +566,139 @@
 
         </div>
     </section>
+    
     <!-- Demo Section -->
     <section id="demo" class="demo" style="background-color: #ffffff; padding: 4rem 0;">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title gradient-text">System Demo</h2>
-                <p class="section-subtitle">Watch our SmartXDR system in action</p>
+                <p class="section-subtitle">Watch our intelligent SOC ecosystem in action through real-world attack scenarios</p>
             </div>
 
-            <div class="architecture-container">
-                <div class="architecture-image" style="background: white; padding: 6rem 2rem; text-align: center;">
-                    <div style="margin-bottom: 2rem;">
-                        <i class="fas fa-play-circle" style="font-size: 5rem; color: #02457A; opacity: 0.9;"></i>
+            <div class="demo-grid" style="display: flex; flex-wrap: wrap; gap: 1.5rem; margin-top: 2rem; justify-content: center;">
+                
+                <!-- Demo 1: C2 Outbound Connection -->
+                <div class="demo-card" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; width: 350px; max-width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="background: linear-gradient(135deg, #02457A, #018ABE); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-satellite-dish" style="color: white; font-size: 1.1rem;"></i>
+                        </div>
+                        <h3 style="color: #1a365d; font-size: 1.1rem; margin: 0;">Scenario 1: C2 Outbound Connection</h3>
                     </div>
-                    <h3 style="color: #1a365d; margin-bottom: 1rem; font-size: 1.5rem;">View Full System Demo</h3>
-                    <p style="color: #4a5568; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
-                        Access our comprehensive video demonstration showcasing the complete SOC pipeline, from log collection to automated response.
+                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                        Simulates a user opening a disguised PDF file on a Windows 11 workstation (192.168.85.150). The executable, camouflaged with a PDF icon, launches a background process and establishes a beacon connection to an external Command & Control (C2) server.
                     </p>
-                    <a href="https://drive.google.com/drive/folders/1TnPI0jEuVOhzjaLv8Pt6tsFN6O2h-dR9?usp=sharing" target="_blank" class="btn btn-primary">
+                    <a href="https://youtu.be/XWCobYtvlBE" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                        <i class="fab fa-youtube"></i>
+                        Watch Demo
+                    </a>
+                </div>
+
+                <!-- Demo 2: SQL Injection Attack -->
+                <div class="demo-card" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; width: 350px; max-width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="background: linear-gradient(135deg, #02457A, #018ABE); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-database" style="color: white; font-size: 1.1rem;"></i>
+                        </div>
+                        <h3 style="color: #1a365d; font-size: 1.1rem; margin: 0;">Scenario 2: SQL Injection Attack</h3>
+                    </div>
+                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                        Demonstrates SQL Injection exploitation against DVWA web application behind ModSecurity WAF (192.168.85.111). The attacker targets the database server (192.168.85.112) to expose sensitive data, manipulate records, or escalate privileges.
+                    </p>
+                    <a href="https://youtu.be/ajynzGKljqE" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                        <i class="fab fa-youtube"></i>
+                        Watch Demo
+                    </a>
+                </div>
+
+                <!-- Demo 3: SMB Brute-force Attack -->
+                <div class="demo-card" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; width: 350px; max-width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="background: linear-gradient(135deg, #02457A, #018ABE); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-key" style="color: white; font-size: 1.1rem;"></i>
+                        </div>
+                        <h3 style="color: #1a365d; font-size: 1.1rem; margin: 0;">Scenario 3: NTLM over SMB Brute-force</h3>
+                    </div>
+                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                        An attacker from the GUEST network (192.168.95.100) uses automated tools to perform password brute-forcing against SMB service on Windows Server (192.168.85.115), attempting NTLM authentication bypass for lateral movement.
+                    </p>
+                    <a href="https://youtu.be/9ECwOKesfUM" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                        <i class="fab fa-youtube"></i>
+                        Watch Demo
+                    </a>
+                </div>
+
+                <!-- Demo 4: Malware Execution -->
+                <div class="demo-card" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; width: 350px; max-width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="background: linear-gradient(135deg, #02457A, #018ABE); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-virus" style="color: white; font-size: 1.1rem;"></i>
+                        </div>
+                        <h3 style="color: #1a365d; font-size: 1.1rem; margin: 0;">Scenario 4: Malware Execution</h3>
+                    </div>
+                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                        Simulates social engineering attack where a user downloads a fake MediaPlayer installer (.zip) containing malware. Wazuh Agent detects the threat via VirusTotal integration, automatically removes the malicious file, and reports to the central system.
+                    </p>
+                    <a href="https://youtu.be/_wuKYfO0x_4" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                        <i class="fab fa-youtube"></i>
+                        Watch Demo
+                    </a>
+                </div>
+
+                <!-- Demo 5: SmartXDR Orchestration -->
+                <div class="demo-card" style="background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%); border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; transition: all 0.3s ease; width: 350px; max-width: 100%;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem;">
+                        <div style="background: linear-gradient(135deg, #02457A, #018ABE); width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fab fa-telegram" style="color: white; font-size: 1.1rem;"></i>
+                        </div>
+                        <h3 style="color: #1a365d; font-size: 1.1rem; margin: 0;">Scenario 5: SmartXDR ChatOps</h3>
+                    </div>
+                    <p style="color: #4a5568; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                        Demonstrates ChatOps workflow via Telegram integration. Administrators interact bidirectionally with SmartXDR through the chatbot, requesting AI-powered incident analysis or executing response actions directly from the messaging platform.
+                    </p>
+                    <a href="https://youtu.be/2qiM6oSsuOg" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                        <i class="fab fa-youtube"></i>
+                        Watch Demo
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="resources" style="padding: 4rem 0;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">Resources</h2>
+                <p class="section-subtitle">Access demo videos and project documentation</p>
+            </div>
+
+            <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+                <!-- YouTube Playlist Card -->
+                <div style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; width: 350px; max-width: 100%; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #c4302b, #ff6b6b); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fab fa-youtube" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4 style="color: #1a365d; font-size: 1.1rem; margin-bottom: 0.5rem;">YouTube Playlist</h4>
+                    <p style="color: #4a5568; font-size: 0.85rem; margin-bottom: 1rem;">Watch all demo videos in one playlist</p>
+                    <a href="https://www.youtube.com/playlist?list=PLshy_4RvrXflyh76ppECu-9yAvTgE2h3d" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                        <i class="fab fa-youtube"></i>
+                        Watch Playlist
+                    </a>
+                </div>
+
+                <!-- Google Drive Card -->
+                <div style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; width: 350px; max-width: 100%; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #02457A, #018ABE); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fab fa-google-drive" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4 style="color: #1a365d; font-size: 1.1rem; margin-bottom: 0.5rem;">Google Drive</h4>
+                    <p style="color: #4a5568; font-size: 0.85rem; margin-bottom: 1rem;">Access additional resources and files</p>
+                    <a href="https://drive.google.com/drive/folders/1TnPI0jEuVOhzjaLv8Pt6tsFN6O2h-dR9?usp=sharing" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
                         <i class="fab fa-google-drive"></i>
-                        Watch on Drive
+                        Open Drive
                     </a>
                 </div>
             </div>
@@ -593,7 +706,7 @@
     </section>
      
     <!-- Team Section -->
-    <section id="team" class="team">
+    <section id="team" class="team" style="background-color: #ffffff;">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title gradient-text">Project Team</h2>
