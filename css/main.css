@@ -651,7 +651,7 @@ p {
 .footer {
     background: var(--gradient-secondary);
     color: white;
-    padding: var(--spacing-xl) 0;
+    padding: var(--spacing-md) 0;
     text-align: center;
 }
 
@@ -659,24 +659,25 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: var(--spacing-md);
+    gap: var(--spacing-sm);
 }
 
 .footer-brand {
     display: flex;
     align-items: center;
     gap: var(--spacing-sm);
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-base);
     font-weight: 700;
 }
 
 .footer-brand i {
-    font-size: var(--font-size-xl);
+    font-size: var(--font-size-lg);
 }
 
 .footer-text p {
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: 0;
+    font-size: 14px;
 }
 
 /* Modal */
