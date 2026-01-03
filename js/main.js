@@ -7,7 +7,7 @@ const navMenu = document.getElementById('nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
 
 // Initialize application
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     initializeNavigation();
     initializeScrollEffects();
     initializeSmoothScrolling();
@@ -19,17 +19,17 @@ document.addEventListener('DOMContentLoaded', function() {
 function initializeNavigation() {
     // Mobile menu toggle
     navToggle.addEventListener('click', toggleMobileMenu);
-    
+
     // Close mobile menu when clicking on links
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
             navMenu.classList.remove('active');
         });
     });
-    
+
     // Navbar scroll effect
     window.addEventListener('scroll', handleNavbarScroll);
-    
+
     // Active link highlighting
     window.addEventListener('scroll', updateActiveNavLink);
 }
@@ -41,7 +41,7 @@ function toggleMobileMenu() {
 
 function handleNavbarScroll() {
     const scrollY = window.scrollY;
-    
+
     if (scrollY > 50) {
         navbar.style.background = 'rgba(255, 255, 255, 0.98)';
         navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
@@ -54,13 +54,13 @@ function handleNavbarScroll() {
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const scrollY = window.pageYOffset;
-    
+
     sections.forEach(section => {
         const sectionHeight = section.offsetHeight;
         const sectionTop = section.offsetTop - 100;
         const sectionId = section.getAttribute('id');
         const navLink = document.querySelector(`.nav-link[href="#${sectionId}"]`);
-        
+
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             navLinks.forEach(link => link.classList.remove('active'));
             if (navLink) navLink.classList.add('active');
@@ -71,11 +71,11 @@ function updateActiveNavLink() {
 // Smooth scrolling functionality
 function initializeSmoothScrolling() {
     navLinks.forEach(link => {
-        link.addEventListener('click', function(e) {
+        link.addEventListener('click', function (e) {
             e.preventDefault();
             const targetId = this.getAttribute('href');
             const targetSection = document.querySelector(targetId);
-            
+
             if (targetSection) {
                 const offsetTop = targetSection.offsetTop - 70;
                 window.scrollTo({
@@ -105,14 +105,14 @@ function initializeScrollEffects() {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-    
+
     const observer = new IntersectionObserver(handleIntersection, observerOptions);
-    
+
     // Observe all sections and cards
     const elementsToObserve = document.querySelectorAll(
         'section, .bento-card, .tech-card, .team-card, .detail-card'
     );
-    
+
     elementsToObserve.forEach(element => {
         element.classList.add('reveal');
         observer.observe(element);
@@ -123,9 +123,9 @@ function handleIntersection(entries) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.classList.add('active');
-            
+
             // Add staggered animation for grid items
-            if (entry.target.classList.contains('bento-card') || 
+            if (entry.target.classList.contains('bento-card') ||
                 entry.target.classList.contains('tech-card')) {
                 addStaggeredAnimation(entry.target);
             }
@@ -144,26 +144,26 @@ function addStaggeredAnimation(element) {
 function initializeAnimations() {
     // Floating cards animation
     animateFloatingCards();
-    
-    // Typing effect for hero title
-    createTypingEffect();
-    
+
+    // Typing effect for hero title - DISABLED
+    // createTypingEffect();
+
     // Parallax effect for hero background
     initializeParallax();
 }
 
 function animateFloatingCards() {
     const floatingCards = document.querySelectorAll('.floating-card');
-    
+
     floatingCards.forEach((card, index) => {
         card.style.animationDelay = `${index * 2}s`;
-        
+
         // Add hover effect
-        card.addEventListener('mouseenter', function() {
+        card.addEventListener('mouseenter', function () {
             this.style.transform = 'translateY(-5px) scale(1.05)';
         });
-        
-        card.addEventListener('mouseleave', function() {
+
+        card.addEventListener('mouseleave', function () {
             this.style.transform = '';
         });
     });
@@ -175,10 +175,10 @@ function createTypingEffect() {
         const text = titleElement.textContent;
         titleElement.textContent = '';
         titleElement.classList.add('typing-text');
-        
+
         let index = 0;
         const typingSpeed = 50;
-        
+
         function typeCharacter() {
             if (index < text.length) {
                 titleElement.textContent += text.charAt(index);
@@ -188,18 +188,18 @@ function createTypingEffect() {
                 titleElement.classList.remove('typing-text');
             }
         }
-        
+
         setTimeout(typeCharacter, 1000);
     }
 }
 
 function initializeParallax() {
     const heroBackground = document.querySelector('.hero-background');
-    
+
     window.addEventListener('scroll', () => {
         const scrolled = window.pageYOffset;
         const rate = scrolled * -0.5;
-        
+
         if (heroBackground) {
             heroBackground.style.transform = `translateY(${rate}px)`;
         }
@@ -210,11 +210,11 @@ function initializeParallax() {
 function createParticles() {
     const heroSection = document.querySelector('.hero');
     if (!heroSection) return;
-    
+
     const particlesContainer = document.createElement('div');
     particlesContainer.className = 'particles';
     heroSection.appendChild(particlesContainer);
-    
+
     for (let i = 0; i < 20; i++) {
         createParticle(particlesContainer);
     }
@@ -223,14 +223,14 @@ function createParticles() {
 function createParticle(container) {
     const particle = document.createElement('div');
     particle.className = 'particle';
-    
+
     // Random positioning and timing
     particle.style.left = Math.random() * 100 + '%';
     particle.style.animationDelay = Math.random() * 8 + 's';
     particle.style.animationDuration = (Math.random() * 3 + 5) + 's';
-    
+
     container.appendChild(particle);
-    
+
     // Remove and recreate particle after animation
     particle.addEventListener('animationend', () => {
         particle.remove();
@@ -253,7 +253,7 @@ function debounce(func, wait) {
 
 function throttle(func, limit) {
     let inThrottle;
-    return function() {
+    return function () {
         const args = arguments;
         const context = this;
         if (!inThrottle) {
@@ -265,7 +265,7 @@ function throttle(func, limit) {
 }
 
 // Performance optimized scroll handler
-const optimizedScrollHandler = throttle(function() {
+const optimizedScrollHandler = throttle(function () {
     handleNavbarScroll();
     updateActiveNavLink();
 }, 16);
@@ -273,7 +273,7 @@ const optimizedScrollHandler = throttle(function() {
 window.addEventListener('scroll', optimizedScrollHandler);
 
 // Window resize handler
-window.addEventListener('resize', debounce(function() {
+window.addEventListener('resize', debounce(function () {
     // Close mobile menu on resize
     if (window.innerWidth > 768) {
         navMenu.classList.remove('active');
@@ -282,7 +282,7 @@ window.addEventListener('resize', debounce(function() {
 }, 250));
 
 // Error handling
-window.addEventListener('error', function(e) {
+window.addEventListener('error', function (e) {
     console.error('JavaScript error:', e.error);
 });
 
