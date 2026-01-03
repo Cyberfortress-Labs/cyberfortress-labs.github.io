@@ -782,10 +782,6 @@ p {
     border-color: var(--primary-blue);
 }
 
-.smartxdr-card .card-header {
-    margin-bottom: var(--spacing-md);
-}
-
 .smartxdr-card h3 {
     color: var(--primary-blue);
     font-size: var(--font-size-lg);
@@ -795,6 +791,20 @@ p {
 .smartxdr-card p {
     color: var(--text-light);
     margin-bottom: 0;
+}
+
+.smartxdr-card .card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-md);
+}
+
+.smartxdr-card-icon {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    border-radius: var(--radius-sm);
 }
 
 .workflow-section {
