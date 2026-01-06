@@ -24,7 +24,7 @@
                 <span>Cyberfortress Labs</span>
             </div><ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#video-intro" class="nav-link">About</a></li>
                 <li><a href="#technologies" class="nav-link">Technologies</a></li>
                 <li><a href="#architecture" class="nav-link">Architecture</a></li>
                 <li><a href="#demo" class="nav-link">Demo</a></li>
@@ -96,23 +96,31 @@
     <section id="video-intro" class="video-intro" style="padding: 4rem 0; background: var(--background);">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title gradient-text">Video Introduction</h2>
+                <h2 class="section-title gradient-text">Introduction</h2>
                 <p class="section-subtitle">Watch our AI-generated introduction to the Intelligent SOC Ecosystem</p>
             </div>
             
             <div style="max-width: 900px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); background: white; padding: var(--spacing-md); border: 1px solid var(--border);">
-                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md);">
-                    <iframe 
-                        src="https://www.youtube.com/embed/o3pfBoWiiQg?si=wYv06xxjFyYj05sC&modestbranding=1&rel=0" 
-                        title="Cyberfortress Video Introduction" 
-                        frameborder="0" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
-                    </iframe>
+                <div id="video-container" style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md); cursor: pointer;" onclick="loadYouTubeVideo()">
+                    <!-- Custom Thumbnail Overlay -->
+                    <img id="video-thumbnail" src="public/video/thumbnail.jpg" alt="Video Thumbnail" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;">
+                    <!-- Gradient Overlay -->
+                    <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(to top, rgba(0,0,0,0.6), transparent); pointer-events: none;"></div>
+                    <!-- Play Button - Bottom Right -->
+                    <div class="btn btn-primary" style="position: absolute; bottom: 20px; right: 20px; display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-size: 0.95rem; box-shadow: 0 4px 20px rgba(2, 69, 122, 0.4);">
+                        <i class="fas fa-play"></i>
+                        Watch Now
+                    </div>
                 </div>
             </div>
+            
+            <script>
+                function loadYouTubeVideo() {
+                    const container = document.getElementById('video-container');
+                    container.innerHTML = '<iframe src="https://www.youtube.com/embed/o3pfBoWiiQg?si=wYv06xxjFyYj05sC&modestbranding=1&rel=0&autoplay=1" title="Cyberfortress Video Introduction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>';
+                    container.style.cursor = 'default';
+                }
+            </script>
             
             <div style="text-align: center; margin-top: 1.5rem;">
                 <p style="color: var(--text-light); font-size: 0.85rem; font-style: italic;">
@@ -296,7 +304,7 @@
     <section id="technologies" class="technologies">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title gradient-text">Technologies & Tools</h2>
+                <h2 class="section-title gradient-text">Technologies</h2>
                 <p class="section-subtitle">Cutting-edge technologies powering our project</p>
             </div>
 
@@ -472,7 +480,7 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title gradient-text">System Architecture</h2>
-                <p class="section-subtitle">Comprehensive deployment architecture</p>
+                <p class="section-subtitle">From detection to response - seamlessly integrated</p>
             </div>
 
             <div class="architecture-container">
@@ -631,8 +639,8 @@
     <section id="workflow" class="workflow">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title gradient-text">System Processing Workflow</h2>
-                <p class="section-subtitle">End-to-end security event processing pipeline</p>
+                <h2 class="section-title gradient-text">Processing Pipeline</h2>
+                <p class="section-subtitle">End-to-end security event processing pipeline of the <br>Intelligent SOC Ecosystem</p>
             </div>
 
             <div class="architecture-container">
@@ -792,6 +800,19 @@
             </div>
 
             <div style="display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center;">
+                <!-- GitHub Organization Card -->
+                <div style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; width: 350px; max-width: 100%; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
+                    <div style="background: linear-gradient(135deg, #24292e, #586069); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
+                        <i class="fab fa-github" style="color: white; font-size: 1.5rem;"></i>
+                    </div>
+                    <h4 style="color: #1a365d; font-size: 1.1rem; margin-bottom: 0.5rem;">GitHub Organization</h4>
+                    <p style="color: #4a5568; font-size: 0.85rem; margin-bottom: 1rem;">Explore source code and repositories</p>
+                    <a href="https://github.com/Cyberfortress-Labs" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.6rem 1.2rem;">
+                        <i class="fab fa-github"></i>
+                        View GitHub
+                    </a>
+                </div>
+
                 <!-- YouTube Playlist Card -->
                 <div style="background: white; border-radius: 16px; padding: 1.5rem; border: 1px solid #e2e8f0; width: 350px; max-width: 100%; text-align: center; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);">
                     <div style="background: linear-gradient(135deg, #c4302b, #ff6b6b); width: 50px; height: 50px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem;">
