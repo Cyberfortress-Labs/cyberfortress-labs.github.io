@@ -101,14 +101,17 @@
             </div>
             
             <div style="max-width: 900px; margin: 0 auto; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow); background: white; padding: var(--spacing-md); border: 1px solid var(--border);">
-                <video 
-                    controls 
-                    preload="metadata"
-                    poster="public/video/thumbnail.jpg"
-                    style="width: 100%; display: block; background: #000; border-radius: var(--radius-md);">
-                    <source src="public/video/project_overview.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+                <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-md);">
+                    <iframe 
+                        src="https://www.youtube.com/embed/o3pfBoWiiQg?si=wYv06xxjFyYj05sC" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;">
+                    </iframe>
+                </div>
             </div>
             
             <div style="text-align: center; margin-top: 1.5rem;">
