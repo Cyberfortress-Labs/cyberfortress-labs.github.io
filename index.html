@@ -138,9 +138,9 @@
                         <h3>Project Description</h3>
                     </div>
                     <p>
-                        A unified intelligent SOC ecosystem where SIEM, SOAR, OpenXDR, Threat Intelligence, and AI/ML/LLM platforms 
+                        A unified <span style="font-weight: 800;" class="gradient-text">Intelligent SOC Ecosystem</span> where SIEM, SOAR, OpenXDR, Threat Intelligence, and AI/ML/LLM platforms 
                         are integrated into a cohesive operational pipeline. The system enables end-to-end security event processing: 
-                        from log collection and normalization to analysis and automated incident response. SmartXDR serves as the 
+                        from log collection and normalization to analysis and automated incident response. <a href="#smartxdr" class="gradient-text" style="text-decoration: none; font-weight: 800;">SmartXDR</a> serves as the 
                         intelligent fusion layer, providing semantic analysis, event enrichment, and risk-based triage prioritization.
                     </p>
                     <!-- 
@@ -161,7 +161,7 @@
                         <span class="project-tag">MISP</span>
                         <span class="project-tag">IntelOwl</span>
                         <span class="project-tag">n8n</span>
-                        <span class="project-tag">SmartXDR</span>
+                        <a href="#smartxdr" class="project-tag" style="cursor: pointer; text-decoration: none">SmartXDR</a>
                         <span class="project-tag">DFIR-IRIS</span>
                         <span class="project-tag">CTI</span>
                         <span class="project-tag">Open Source</span>
@@ -454,9 +454,9 @@
                         <span class="tech-tag">
                             <img src="img/anomaly-detection-icon.png" alt="Anomaly Detection" class="tech-tag-icon">
                             Anomaly Detection</span>
-                        <span class="tech-tag">
+                        <a href="#smartxdr" class="tech-tag" style="cursor: pointer; text-decoration: none;">
                             <img src="img/smartxdr-icon.png" alt="SmartXDR" class="tech-tag-icon">
-                            SmartXDR</span>
+                            <span class="gradient-text" style="font-weight: 600;">SmartXDR</span></a>
                     </div>
                 </div>
             </div>
@@ -498,70 +498,14 @@
                     </div>
                     <div class="detail-card">
                         <h3><i class="fas fa-cogs"></i> Orchestration & Response</h3>
-                        <p>n8n (Integration Hub), DFIR-IRIS (Incident Management), MISP & IntelOwl (CTI Platform), and SmartXDR (AI-powered analysis, automated reporting, human-in-the-loop decision support).</p>
+                        <p>n8n (Integration Hub), DFIR-IRIS (Incident Management), MISP & IntelOwl (CTI Platform), and <a href="#smartxdr" style="color: var(--primary-blue); text-decoration: none; font-weight: 800; " class="gradient-text">SmartXDR</a> (AI-powered analysis, automated reporting, human-in-the-loop decision support).</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- System Processing Workflow Section -->
-    <section id="workflow" class="workflow" style="background: var(--background);">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title gradient-text">System Processing Workflow</h2>
-                <p class="section-subtitle">End-to-end security event processing pipeline</p>
-            </div>
-
-            <div class="architecture-container">
-                <div class="architecture-image">
-                    <img src="img/KLTN_SOC-Ecosystem-Pipeline.drawio.png" alt="SOC Ecosystem Pipeline" class="arch-img">
-                    <div class="image-overlay">
-                        <button class="btn btn-primary" onclick="openPipelineModal()">
-                            <i class="fas fa-expand"></i>
-                            View Full Size
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="workflow-phases">
-                <div class="phase-card">
-                    <span class="phase-number">1</span>
-                    <h4>Log Collecting</h4>
-                    <p>Elastic Agent and Fleet collect raw logs from Firewall (pfSense), Linux Router, IDPS (Suricata), NSM (Zeek), WAF (ModSecurity). Logs are parsed, normalized to ECS standard and stored for pipeline processing.</p>
-                </div>
-                <div class="phase-card">
-                    <span class="phase-number">2</span>
-                    <h4>Log Pre-processing</h4>
-                    <p>SmartXDR Ingest Pipeline filters redundant fields, extracts contextual information, and generates the ml_input field - a structured, condensed log representation serving as input for ML classification.</p>
-                </div>
-                <div class="phase-card">
-                    <span class="phase-number">3</span>
-                    <h4>Classification and Enrichment</h4>
-                    <p>SmartXDR Classification uses Bylastic (DistilBERT-based model by Byviz Analytics) to analyze ml_input semantically, assign severity labels, and generate prediction_probability scores stored in ml.prediction.* fields.</p>
-                </div>
-                <div class="phase-card">
-                    <span class="phase-number">4</span>
-                    <h4>Alert Generation and Correlation</h4>
-                    <p>Elastic Detection Rules query ML fields for anomaly detection. ElastAlert2 monitors alerts index and forwards matched alerts with IoCs, timestamps, and Kibana links to DFIR-IRIS for case management.</p>
-                </div>
-                <div class="phase-card">
-                    <span class="phase-number">5</span>
-                    <h4>Contextual Enrichment and Incident Response</h4>
-                    <p>Analysts review alerts in DFIR-IRIS, convert to Incident Cases. IntelOwl performs IoC pre-analysis via MISP and VirusTotal. SmartXDR Analysis uses RAG for intelligent interpretation and risk assessment.</p>
-                </div>
-                <div class="phase-card">
-                    <span class="phase-number">6</span>
-                    <h4>Automated Response and Reporting</h4>
-                    <p>n8n workflows orchestrate Wazuh Active Response for endpoint isolation, pfSense/Suricata rule updates for network blocking. SmartXDR Reporting generates DOCX reports, uploads to cloud storage, and sends Telegram notifications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SmartXDR Section -->
-    <section id="smartxdr" class="smartxdr" style="background: var(--card-bg);">
+<!-- SmartXDR Section -->
+    <section id="smartxdr" class="smartxdr">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title gradient-text">SmartXDR</h2>
@@ -679,6 +623,62 @@
 
         </div>
     </section>
+    
+    <!-- System Processing Workflow Section -->
+    <section id="workflow" class="workflow">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title gradient-text">System Processing Workflow</h2>
+                <p class="section-subtitle">End-to-end security event processing pipeline</p>
+            </div>
+
+            <div class="architecture-container">
+                <div class="architecture-image">
+                    <img src="img/KLTN_SOC-Ecosystem-Pipeline.drawio.png" alt="SOC Ecosystem Pipeline" class="arch-img">
+                    <div class="image-overlay">
+                        <button class="btn btn-primary" onclick="openPipelineModal()">
+                            <i class="fas fa-expand"></i>
+                            View Full Size
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="workflow-phases">
+                <div class="phase-card">
+                    <span class="phase-number">1</span>
+                    <h4>Log Collecting</h4>
+                    <p>Elastic Agent and Fleet collect raw logs from Firewall (pfSense), Linux Router, IDPS (Suricata), NSM (Zeek), WAF (ModSecurity). Logs are parsed, normalized to ECS standard and stored for pipeline processing.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">2</span>
+                    <h4>Log Pre-processing</h4>
+                    <p>SmartXDR Ingest Pipeline filters redundant fields, extracts contextual information, and generates the ml_input field - a structured, condensed log representation serving as input for ML classification.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">3</span>
+                    <h4>Classification and Enrichment</h4>
+                    <p>SmartXDR Classification uses Bylastic (DistilBERT-based model by Byviz Analytics) to analyze ml_input semantically, assign severity labels, and generate prediction_probability scores stored in ml.prediction.* fields.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">4</span>
+                    <h4>Alert Generation and Correlation</h4>
+                    <p>Elastic Detection Rules query ML fields for anomaly detection. ElastAlert2 monitors alerts index and forwards matched alerts with IoCs, timestamps, and Kibana links to DFIR-IRIS for case management.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">5</span>
+                    <h4>Contextual Enrichment and Incident Response</h4>
+                    <p>Analysts review alerts in DFIR-IRIS, convert to Incident Cases. IntelOwl performs IoC pre-analysis via MISP and VirusTotal. SmartXDR Analysis uses RAG for intelligent interpretation and risk assessment.</p>
+                </div>
+                <div class="phase-card">
+                    <span class="phase-number">6</span>
+                    <h4>Automated Response and Reporting</h4>
+                    <p>n8n workflows orchestrate Wazuh Active Response for endpoint isolation, pfSense/Suricata rule updates for network blocking. SmartXDR Reporting generates DOCX reports, uploads to cloud storage, and sends Telegram notifications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     
     <!-- Demo Section -->
     <section id="demo" class="demo" style="background: var(--background); padding: 4rem 0;">
