@@ -98,6 +98,3 @@ SmartXDR is the intelligent SOC ecosystem core designed as the central brain orc
 
 - **Lai Quan Thien** - [WanThinnn](https://github.com/WanThinnn)
 - **Ho Diep Huy** - [hohuyy](https://github.com/hohuyy)
-
-## Last Updated
-June 19, 2025
